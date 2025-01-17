@@ -8,10 +8,24 @@
     android:orientation="vertical">
     <TextView
         android:id="@+id/text"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:text="Second"/>
+        style="@style/textView"
+        android:text="Formularz"/>
+    <EditText
+        android:id="@+id/name"
+        android:hint="Name"
+        style="@style/editText"/>
+    <EditText
+        android:id="@+id/surname"
+        android:hint="Surname"
+        style="@style/editText"/>
+    <EditText
+        android:id="@+id/adres"
+        android:hint="Adres"
+        style="@style/editText"/>
+    <EditText
+        android:id="@+id/email"
+        android:hint="E-mail"
+        style="@style/editText"/>
     <Button
         android:id="@+id/navigateBack"
         android:layout_width="wrap_content"

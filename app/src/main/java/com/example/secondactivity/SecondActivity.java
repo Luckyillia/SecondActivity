@@ -18,10 +18,6 @@ public class SecondActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_second);
 
-        TextView text = findViewById(R.id.text);
-        String massage = getIntent().getStringExtra("massage");
-        text.setText(massage);
-
         Button but = findViewById(R.id.navigateBack);
         but.setOnClickListener(v->{
             Intent intent = new Intent(SecondActivity.this,MainActivity.class);
