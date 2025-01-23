@@ -14,14 +14,26 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        TextView text = findViewById(R.id.text);
-        String massage = getIntent().getStringExtra("massage");
-        text.setText(massage);
+        TextView nameText = findViewById(R.id.name);
+        TextView surnameText = findViewById(R.id.surname);
+        TextView adresText = findViewById(R.id.adres);
+        TextView emailText = findViewById(R.id.email);
+
+        String name = getIntent().getStringExtra("name");
+        String surname = getIntent().getStringExtra("surname");
+        String adres = getIntent().getStringExtra("adres");
+        String email = getIntent().getStringExtra("email");
+        if(name != null){
+            nameText.setText("Imie: "+name);
+            surnameText.setText("Nazwisko: "+surname);
+            adresText.setText("Adres: "+adres);
+            emailText.setText("Email: "+email);
+        }
+
 
         Button but = findViewById(R.id.secondActivity);
         but.setOnClickListener(v->{
             Intent intent = new Intent(MainActivity.this,SecondActivity.class);
-            intent.putExtra("massage", "witaj z mainactivity");
             startActivity(intent);
         });
 
